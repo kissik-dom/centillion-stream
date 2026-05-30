@@ -1,4 +1,3 @@
-import { Authenticated, Unauthenticated } from "convex/react";
 import { ArrowRight, Film, Monitor, Play, Radio, Tv, Zap } from "lucide-react";
 import { Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -15,8 +14,6 @@ const features = [
 export function LandingPage() {
   return (
     <>
-      <Authenticated><Navigate to="/dashboard" replace /></Authenticated>
-      <Unauthenticated>
         <div className="min-h-screen flex flex-col">
           <div className="flex-1 flex flex-col items-center justify-center px-4 py-20">
             <div className="relative mb-8">
@@ -51,7 +48,6 @@ export function LandingPage() {
           </div>
           <footer className="border-t border-[rgba(255,255,255,0.06)] py-6 text-center text-muted-foreground text-sm">Centillion OS · Part of the Centillion Ecosystem</footer>
         </div>
-      </Unauthenticated>
     </>
   );
 }
